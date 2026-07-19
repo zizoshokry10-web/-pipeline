@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ANOON Pipeline — IT Sales CRM</title>
+<title>Pipeline — IT Sales CRM</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -116,9 +116,9 @@
   <header class="top">
     <div class="top-in">
       <div style="display:flex;align-items:center;gap:14px">
-        <div class="logo">AP</div>
+        <div class="logo">P</div>
         <div>
-          <div style="font-weight:900;font-size:17px;letter-spacing:.06em;text-transform:uppercase">Anoon Pipeline</div>
+          <div style="font-weight:900;font-size:17px;letter-spacing:.06em;text-transform:uppercase">Pipeline</div>
           <div class="mono" style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)">IT Sales CRM · Live Shared Database</div>
         </div>
       </div>
@@ -302,7 +302,7 @@
 
   <footer class="foot">
     <div class="foot-in">
-      <span>Anoon Pipeline · Consolidated Database</span>
+      <span>Pipeline · Consolidated Database</span>
       <span>Live shared data — syncs to all open browsers via Supabase</span>
     </div>
   </footer>
@@ -379,7 +379,7 @@
 
 <script>
 /* ============================================================
-   ANOON PIPELINE — standalone single-file app
+   PIPELINE — standalone single-file app
    Backend: Supabase (always-live shared data, no room codes)
    Same architecture as Connect IQ: one row in `plans` table,
    Realtime WebSocket push + 5-second polling fallback.
@@ -404,14 +404,14 @@ const BASELINE = [
   {c:"Sharabati", d:"Kaspersky", cls:"Kaspersky / Endpoint", o:"Kamel", q:"Third Quarter", v:20000.00, s:"In Progress", n:""},
   {c:"Sharabati", d:"Network", cls:"Network / Infrastructure", o:"Kamel", q:"Third Quarter", v:12000.00, s:"In Progress", n:""},
   {c:"MCS Oil", d:"Forti Rugged", cls:"Cybersecurity / Firewalls", o:"Kamel", q:"Third Quarter", v:11901.00, s:"In Progress", n:""},
-  {c:"Zeta Pharma", d:"Sophos 3300 Xstream", cls:"Sophos Security", o:"EL-Shishi", q:"Third Quarter", v:27836.52, s:"In Progress", n:""},
-  {c:"Zeta Pharma", d:"Microwave", cls:"Network / Infrastructure", o:"EL-Shishi", q:"Third Quarter", v:4400.00, s:"In Progress", n:""},
-  {c:"Security Co.", d:"Fiber", cls:"Network / Infrastructure", o:"EL-Shishi", q:"Third Quarter", v:7260.00, s:"In Progress", n:"Verify customer name"},
-  {c:"Baron Resort", d:"Renewal FortiGate 80F", cls:"Cybersecurity / Firewalls", o:"EL-Shishi", q:"Third Quarter", v:1180.00, s:"In Progress", n:""},
-  {c:"China Fenmax", d:"Dell Latitude 7350", cls:"Dell / Servers / Hardware", o:"EL-Shishi", q:"Third Quarter", v:1956.12, s:"In Progress", n:"Verify customer name"},
-  {c:"Smart Village", d:"FortiGate 600E Renewal", cls:"Cybersecurity / Firewalls", o:"EL-Shishi", q:"Third Quarter", v:9775.00, s:"In Progress", n:""},
-  {c:"Al Basheer School", d:"Cable CAT 6A", cls:"Network / Infrastructure", o:"EL-Shishi", q:"Third Quarter", v:2576.00, s:"In Progress", n:""},
-  {c:"Al Basheer School", d:"HPE Aruba Switch 24 port", cls:"Network / Infrastructure", o:"EL-Shishi", q:"Third Quarter", v:6003.00, s:"In Progress", n:""},
+  {c:"Zeta Pharma", d:"Sophos 3300 Xstream", cls:"Sophos Security", o:"El Sheikh", q:"Third Quarter", v:27836.52, s:"In Progress", n:""},
+  {c:"Zeta Pharma", d:"Microwave", cls:"Network / Infrastructure", o:"El Sheikh", q:"Third Quarter", v:4400.00, s:"In Progress", n:""},
+  {c:"Security Co.", d:"Fiber", cls:"Network / Infrastructure", o:"El Sheikh", q:"Third Quarter", v:7260.00, s:"In Progress", n:"Verify customer name"},
+  {c:"Baron Resort", d:"Renewal FortiGate 80F", cls:"Cybersecurity / Firewalls", o:"El Sheikh", q:"Third Quarter", v:1180.00, s:"In Progress", n:""},
+  {c:"China Fenmax", d:"Dell Latitude 7350", cls:"Dell / Servers / Hardware", o:"El Sheikh", q:"Third Quarter", v:1956.12, s:"In Progress", n:"Verify customer name"},
+  {c:"Smart Village", d:"FortiGate 600E Renewal", cls:"Cybersecurity / Firewalls", o:"El Sheikh", q:"Third Quarter", v:9775.00, s:"In Progress", n:""},
+  {c:"Al Basheer School", d:"Cable CAT 6A", cls:"Network / Infrastructure", o:"El Sheikh", q:"Third Quarter", v:2576.00, s:"In Progress", n:""},
+  {c:"Al Basheer School", d:"HPE Aruba Switch 24 port", cls:"Network / Infrastructure", o:"El Sheikh", q:"Third Quarter", v:6003.00, s:"In Progress", n:""},
   {c:"Manal", d:"Microsoft", cls:"Microsoft Cloud / Licenses", o:"Nourhan", q:"Third Quarter", v:3735.00, s:"In Progress", n:""},
   {c:"Al Menior", d:"Sophos", cls:"Sophos Security", o:"Nourhan", q:"Third Quarter", v:3927.00, s:"In Progress", n:""},
   {c:"Tameer", d:"Sophos", cls:"Sophos Security", o:"Nourhan", q:"Third Quarter", v:640.00, s:"In Progress", n:""},
@@ -424,9 +424,9 @@ const BASELINE = [
   {c:"Delivery Fix", d:"Sophos", cls:"Sophos Security", o:"Nabil", q:"Third Quarter", v:4140.00, s:"In Progress", n:""},
   {c:"Direct KSA", d:"IPT over Fiber", cls:"Network / Infrastructure", o:"Nabil", q:"Third Quarter", v:11088.40, s:"In Progress", n:""},
   {c:"Detral", d:"3CX", cls:"3CX Unified Comm", o:"Nabil", q:"Third Quarter", v:550.00, s:"In Progress", n:""},
-  {c:"We", d:"Kaspersky", cls:"Kaspersky / Endpoint", o:"Esam", q:"Third Quarter", v:150000.00, s:"In Progress", n:""},
-  {c:"MAFI", d:"CrowdStrike", cls:"Kaspersky / Endpoint", o:"Esam", q:"Third Quarter", v:20000.00, s:"In Progress", n:""},
-  {c:"Element", d:"Sophos", cls:"Sophos Security", o:"Esam", q:"Third Quarter", v:15000.00, s:"In Progress", n:""},
+  {c:"We", d:"Kaspersky", cls:"Kaspersky / Endpoint", o:"Essam", q:"Third Quarter", v:150000.00, s:"In Progress", n:""},
+  {c:"MAFI", d:"CrowdStrike", cls:"Kaspersky / Endpoint", o:"Essam", q:"Third Quarter", v:20000.00, s:"In Progress", n:""},
+  {c:"Element", d:"Sophos", cls:"Sophos Security", o:"Essam", q:"Third Quarter", v:15000.00, s:"In Progress", n:""},
 ];
 
 function startApp(){
@@ -438,7 +438,7 @@ function startApp(){
       return {
         rows: BASELINE.map((r,i)=>({id:i+1, ...r})),
         nextId: BASELINE.length+1,
-        OWNERS: ["Kamel","EL-Shishi","Nourhan","Nabil","Esam"],
+        OWNERS: ["Kamel","El Sheikh","Nourhan","Nabil","Essam"],
         CLASSES: ["Cybersecurity / Firewalls","Sophos Security","Kaspersky / Endpoint","3CX Unified Comm","Microsoft Cloud / Licenses","Dell / Servers / Hardware","Network / Infrastructure","Others / Mixed Solutions"],
         fOwner:"", fCls:"", fStatus:"", fQuarter:"Third Quarter", fSearch:"",
         showForm:false, showConfirm:false, editingId:null,
