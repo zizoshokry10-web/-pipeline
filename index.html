@@ -629,11 +629,23 @@ function startApp(){
       _cacheLocal(){
         try{ localStorage.setItem(CACHE_KEY, JSON.stringify({ts:this._lastTs, data:this._snapshot()})); }catch(e){}
       },
+      _migrateOwnerNames(){
+        // One-time fix: rename legacy owner spellings wherever they still appear.
+        const renameMap = { "EL-Shishi":"El Sheikh", "Esam":"Essam" };
+        let changed = false;
+        this.rows.forEach(r=>{
+          if(renameMap[r.o]){ r.o = renameMap[r.o]; changed = true; }
+        });
+        return changed;
+      },
       async _connect(){
         // 1. Local cache first so the page is instantly useful
         try{
           const cached = JSON.parse(localStorage.getItem(CACHE_KEY));
-          if(cached && cached.data) this._applySnap(cached.data);
+          if(cached && cached.data){
+            this._applySnap(cached.data);
+            this._migrateOwnerNames();
+          }
         }catch(e){}
 
         // 2. Fetch the shared row (or seed it on very first run)
@@ -643,7 +655,9 @@ function startApp(){
           if(data && data.data){
             this._lastTs = data.ts || 0;
             this._applySnap(data.data);
+            const renamed = this._migrateOwnerNames();
             this._cacheLocal();
+            if(renamed) await this._push(); // persist the corrected names for everyone
           } else {
             await this._push(); // first visit ever — seed baseline
           }
